@@ -1,6 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import cryptowebsite_ss from "./cryptowebsite_ss.png";
+import energywebsite_ss from "./energywebsite_ss.png";
+import furniture_ss from "./furniture_ss.png"
+import yogawebsite_ss from "./yogawebsite_ss.png"
+
 import Image from "next/image";
 import {
   Menu,
@@ -88,64 +93,46 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "CryptoWatch",
       description:
-        "A full-featured e-commerce solution with payment integration, inventory management, and real-time analytics. Built with React, Node.js, and PostgreSQL.",
+        "A modern crypto tracking platform that displays real-time cryptocurrency data, NFTs, and market news using public APIs. Built with Next and styled using Tailwind CSS.",
       image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      link: "https://your-project-link.com",
-      tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+        cryptowebsite_ss,
+      link: "https://crypto-final-five.vercel.app",
+      tags: ["React", "Node.js", "RESTful APIs", "Nextjs","Javascript(ES6+)","TailwindCSS"],
     },
     {
       id: 2,
-      title: "Project Management SaaS",
+      title: "SURGE Energy Drink",
       description:
-        "Enterprise-grade project management tool with team collaboration, task tracking, and advanced reporting features. Scalable architecture serving 10k+ users.",
+        "An energy drink website displaying energy drink catalog , atheletes and news",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      link: "https://your-project-link.com",
-      tags: ["Next.js", "MongoDB", "Redux", "WebSocket"],
+        energywebsite_ss,
+      link: "https://energy-deploy-weld.vercel.app",
+      tags: ["React.js","TailwindCSS","HTML","Javascript(ES6+)","Nodejs"]
     },
-    {
+
+     {
       id: 3,
-      title: "Real-Time Analytics Dashboard",
+      title: "LUXORIA",
       description:
-        "Data visualization platform with real-time updates, interactive charts, and custom reporting. Processes millions of data points efficiently.",
+        "A furniture showcase website that displays the latest furniture catalog with modern designs and organized product sections.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      link: "https://your-project-link.com",
-      tags: ["React", "D3.js", "Express", "Redis"],
+        furniture_ss,
+      link: "https://furniture-deployed.vercel.app",
+      tags: ["React.js","TailwindCSS","HTML","Vite","Javascript(ES6+)"]
     },
+   
     {
       id: 4,
-      title: "Social Media Application",
+      title: "ZenFlow",
       description:
-        "Modern social networking platform with real-time messaging, media sharing, and AI-powered content recommendations. Built for scale and performance.",
+        "A modern yoga website displaying information about Yoga",
       image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-      link: "https://your-project-link.com",
-      tags: ["Next.js", "TypeScript", "PostgreSQL", "AWS"],
-    },
-    {
-      id: 5,
-      title: "Fintech Dashboard",
-      description:
-        "Secure financial management platform with transaction tracking, budget planning, and investment portfolio management. Bank-grade security implementation.",
-      image:
-        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=600&fit=crop",
-      link: "https://your-project-link.com",
-      tags: ["React", "Node.js", "Security", "Encryption"],
-    },
-    {
-      id: 6,
-      title: "Healthcare Management System",
-      description:
-        "Comprehensive healthcare solution with patient records, appointment scheduling, and telemedicine features. HIPAA compliant and secure.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
-      link: "https://your-project-link.com",
-      tags: ["Next.js", "MongoDB", "Video API", "Security"],
-    },
+        yogawebsite_ss,
+      link: "https://yoga-alpha-ashen.vercel.app",
+      tags: ["React.js", "Javascript(ES6+)", "TailwindCSS", "HTML","Vite","Javascript(ES6+)"]
+    }
   ];
 
   return (
