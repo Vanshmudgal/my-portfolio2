@@ -263,9 +263,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg text-slate-400 leading-relaxed">
-                Transforming innovative ideas into powerful, scalable web
-                applications. I build enterprise-grade solutions that drive
-                business growth and deliver exceptional user experiences.
+            I build fast, scalable, SEO-optimized web applications that help startups and businesses attract more traffic and convert users into customers.”
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -285,7 +283,7 @@ export default function Home() {
               </div>
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Vanshmudgal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
@@ -293,7 +291,7 @@ export default function Home() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/vansh-mudgal-102096134"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
@@ -301,7 +299,7 @@ export default function Home() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:contact@vanshmudgal.com"
+                  href="mailto:contact@vanshmudgal12@gmail.com"
                   className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
                 >
                   <Mail className="w-5 h-5" />
@@ -519,14 +517,14 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-violet-600/10 to-indigo-600/10 rounded-3xl p-12 border border-violet-500/20 text-center backdrop-blur-sm">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
-              Ready to Start Your{" "}
+              Looking to build or improve{" "}
               <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-                Next Project?
+               Web Product?
               </span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
-              Let&apos;s collaborate and bring your ideas to life. I&apos;m available for
-              freelance projects and consulting.
+            Discuss your project and get a free consultation
+                
             </p>
             <a
               href="mailto:contact@vanshmudgal.com"
