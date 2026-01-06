@@ -5,6 +5,7 @@ import cryptowebsite_ss from "./cryptowebsite_ss.png";
 import energywebsite_ss from "./energywebsite_ss.png";
 import furniture_ss from "./furniture_ss.png"
 import yogawebsite_ss from "./yogawebsite_ss.png"
+import { Search, TrendingUp, BarChart, Globe } from "lucide-react";
 
 import Image from "next/image";
 import {
@@ -21,6 +22,7 @@ import {
   ChevronDown,
   ExternalLink,
 } from "lucide-react";
+import TechCarousel from "./TechCarousel";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,26 +53,27 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  
   const services = [
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "Full Stack Development",
-      description:
-        "End-to-end application development with modern technologies and scalable architecture.",
-    },
-    {
-      icon: <Laptop className="w-8 h-8" />,
-      title: "Web Applications",
-      description:
-        "Custom web applications built with React, Node.js, and cutting-edge frameworks.",
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Performance Optimization",
-      description:
-        "Lightning-fast applications optimized for performance and user experience.",
-    },
-  ];
+  {
+    icon: <Search className="w-8 h-8" />,
+    title: "SEO-Optimized Websites",
+    description:
+      "Websites engineered for search engines with proper structure, speed optimization, and SEO best practices to maximize visibility.",
+  },
+  {
+    icon: <Laptop className="w-8 h-8" />,
+    title: "Web Applications",
+    description:
+      "Custom web applications built with React, Node.js, and cutting-edge frameworks.",
+  },
+  {
+    icon: <Zap className="w-8 h-8" />,
+    title: "Performance Optimization",
+    description:
+      "Lightning-fast applications optimized for performance and user experience.",
+  },
+];
 
   const skills = [
     {
@@ -95,7 +98,7 @@ export default function Home() {
       id: 1,
       title: "CryptoWatch",
       description:
-        "A modern crypto tracking platform that displays real-time cryptocurrency data, NFTs, and market news using public APIs. Built with Next and styled using Tailwind CSS.",
+        "Helps crypto investors track real-time market movements, monitor NFTs, and make faster, informed decisions without switching between multiple platforms",
       image:
         cryptowebsite_ss,
       link: "https://crypto-final-five.vercel.app",
@@ -105,7 +108,7 @@ export default function Home() {
       id: 2,
       title: "SURGE Energy Drink",
       description:
-        "An energy drink website displaying energy drink catalog , atheletes and news",
+        "Builds a strong brand presence by showcasing products, athletes, and updates in one engaging platform that drives user interest and brand loyalty.",
       image:
         energywebsite_ss,
       link: "https://energy-deploy-weld.vercel.app",
@@ -116,7 +119,7 @@ export default function Home() {
       id: 3,
       title: "LUXORIA",
       description:
-        "A furniture showcase website that displays the latest furniture catalog with modern designs and organized product sections.",
+        "Helps furniture brands showcase their collections with a clean, organized experience that improves product discovery and user engagement.",
       image:
         furniture_ss,
       link: "https://furniture-deployed.vercel.app",
@@ -127,7 +130,7 @@ export default function Home() {
       id: 4,
       title: "ZenFlow",
       description:
-        "A modern yoga website displaying information about Yoga",
+        "A modern yoga website mockup designed to present yoga practices, informative articles, and available courses in a clean, user-friendly layout.",
       image:
         yogawebsite_ss,
       link: "https://yoga-alpha-ashen.vercel.app",
@@ -138,6 +141,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       {/* Navigation */}
+     
       <nav
         className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
           isScrolled
@@ -299,7 +303,7 @@ export default function Home() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:contact@vanshmudgal12@gmail.com"
+                  href="mailto:vanshmudgal12@gmail.com"
                   className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
                 >
                   <Mail className="w-5 h-5" />
@@ -323,21 +327,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-slate-400 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -375,171 +365,235 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section
-        id="portfolio"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
-              Featured{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-                Portfolio
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Showcasing my best work and successful project deliveries
-            </p>
+    {/* Portfolio Section - 2x2 Grid */}
+<section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950">
+  <div className="max-w-6xl mx-auto">
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-violet-600/20 to-indigo-600/20 rounded-2xl mb-6 border border-violet-500/20">
+        <svg className="w-8 h-8 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      </div>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
+        My{" "}
+        <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+          Portfolio
+        </span>
+      </h2>
+      <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+        A curated selection of projects that showcase my skills and expertise
+      </p>
+    </div>
+
+    {/* 2x2 Grid Layout */}
+    <div className="grid md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className="group bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-violet-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/10"
+        >
+          {/* Project Image */}
+          <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-indigo-600/5"></div>
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+            
+            {/* Project Type Badge */}
+            <div className="absolute top-4 right-4 px-4 py-2 bg-slate-900/90 backdrop-blur-sm rounded-full border border-slate-800">
+              <span className="text-sm text-slate-300">{project.type || "Web App"}</span>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="group bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-violet-500/50 transition-all hover:shadow-xl hover:shadow-violet-500/10"
+          {/* Project Content */}
+          <div className="p-7 space-y-5">
+            <div>
+              <h3 className="text-xl font-bold text-slate-100 group-hover:text-violet-400 transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-slate-400 text-sm mt-2 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="text-xs px-3 py-1.5 bg-violet-500/10 text-violet-400 rounded-lg border border-violet-500/20 hover:bg-violet-500/20 transition-colors"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex items-center justify-between pt-4 border-t border-slate-800">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-lg font-medium hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/30"
               >
-                <div className="relative h-48 overflow-hidden bg-slate-800">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60"></div>
-                </div>
-
-                <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-slate-100 group-hover:text-violet-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="text-xs px-3 py-1 bg-violet-500/10 text-violet-400 rounded-full border border-violet-500/20"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors font-medium group/link"
-                  >
-                    View Project
-                    <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
-                  </a>
-                </div>
-              </div>
-            ))}
+                <span>View Project</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-300 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  <span className="text-sm font-medium">Code</span>
+                </a>
+              )}
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
 
+    {/* View More Projects Button (if you have more than 4 projects) */}
+    {projects.length > 4 && (
+      <div className="text-center mt-12">
+        <a
+          href="/projects"
+          className="inline-flex items-center gap-3 px-8 py-3 bg-slate-900 border border-slate-800 text-slate-300 rounded-lg font-medium hover:bg-slate-800 hover:border-slate-700 transition-all duration-300"
+        >
+          <span>View All Projects</span>
+          <ArrowRight className="w-5 h-5" />
+        </a>
+      </div>
+    )}
+  </div>
+</section>
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
-              Technical{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-                Expertise
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Mastering the latest technologies to build cutting-edge solutions
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {skills.map((skillSet, index) => (
-              <div
-                key={index}
-                className="bg-slate-900 border border-slate-800 p-8 rounded-2xl"
-              >
-                <h3 className="text-xl font-bold mb-6 text-violet-400">
-                  {skillSet.category}
-                </h3>
-                <div className="space-y-3">
-                  {skillSet.items.map((skill, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-violet-400" />
-                      <span className="text-slate-300 font-medium">
-                        {skill}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+       <TechCarousel/>
 
-      {/* About Section */}
-      <section
-        id="about"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
-            About{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              Me
-            </span>
-          </h2>
-          <p className="text-lg text-slate-400 leading-relaxed mb-8">
-            I&apos;m Vansh Mudgal, a passionate Full Stack Developer dedicated to
-            creating innovative digital solutions. With extensive experience in
-            both frontend and backend technologies, I specialize in building
-            scalable, high-performance applications that solve real-world
-            problems. My approach combines technical excellence with creative
-            problem-solving to deliver exceptional results for every project.
-          </p>
-          <p className="text-lg text-slate-400 leading-relaxed">
-            Whether you&apos;re a startup looking to build your MVP or an enterprise
-            seeking to modernize your infrastructure, I bring the expertise and
-            dedication needed to turn your vision into reality.
-          </p>
-        </div>
-      </section>
+      
+
+     {/* About Section */}
+<section
+  id="about"
+  className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30"
+>
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
+      About{" "}
+      <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+        Me
+      </span>
+    </h2>
+
+    <p className="text-lg text-slate-300 leading-relaxed mb-6">
+      I design and build{" "}
+      <span className="text-violet-400 font-semibold">
+        SEO-optimized, high-performance web experiences
+      </span>{" "}
+      that help businesses attract traffic, retain users, and convert visitors
+      into customers.
+    </p>
+
+    <p className="text-lg text-slate-400 leading-relaxed mb-6">
+      My focus lies in creating fast, accessible, and search-engine-friendly
+      interfaces using modern frontend technologies like React and Next.js.
+      From clean semantic markup to performance optimization and Core Web
+      Vitals, every decision is made to improve visibility and user experience.
+    </p>
+
+    <p className="text-lg text-slate-400 leading-relaxed">
+      Whether you’re launching a new product, improving search rankings, or
+      refining your website’s user journey, I bring a results-driven mindset
+      that aligns design, performance, and SEO to drive real business growth.
+    </p>
+  </div>
+</section>
+
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-violet-600/10 to-indigo-600/10 rounded-3xl p-12 border border-violet-500/20 text-center backdrop-blur-sm">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
-              Looking to build or improve{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-               Web Product?
-              </span>
-            </h2>
-            <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
-            Discuss your project and get a free consultation
-                
-            </p>
-            <a
-              href="mailto:contact@vanshmudgal.com"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-violet-500/50 transition-all"
-            >
-              Get In Touch <ArrowRight className="w-5 h-5" />
-            </a>
+     {/* CTA Section */}
+{/* CTA Section - Clean Minimalist */}
+<section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+  <div className="max-w-2xl mx-auto">
+    <div className="text-center">
+      {/* Icon */}
+      <div className="inline-flex items-center justify-center w-20 h-20 mb-8">
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full blur-lg opacity-30"></div>
+          <div className="relative bg-slate-900 p-4 rounded-full border border-slate-800">
+            <svg className="w-8 h-8 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
           </div>
         </div>
-      </section>
+      </div>
+
+   <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-100">
+  Transform Your Business with a <br /> Powerful Web Presence
+</h2>
+
+<p className="text-xl text-slate-400 mb-10 max-w-3xl mx-auto">
+  Get a fast, professional website that attracts customers, builds trust,
+  and helps your business grow online. Let’s discuss your requirements today.
+</p>
+
+
+
+      {/* Simple Contact Links */}
+      <div className="space-y-4 mb-10">
+        <a 
+          href="mailto:vanshmudgal12@gmail.com"
+          className="group flex items-center justify-center gap-3 text-lg text-slate-300 hover:text-violet-400 transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>vanshmudgal12@gmail.com</span>
+          <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+        </a>
+        
+        <a 
+          href="tel:+919899546612"
+          className="group flex items-center justify-center gap-3 text-lg text-slate-300 hover:text-indigo-400 transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>+91 9899546612</span>
+          <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+        </a>
+      </div>
+
+      {/* Single Primary Button */}
+      <div>
+        <a
+          href="mailto:vanshmudgal12@gmail.com"
+          className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white px-10 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/25"
+        >
+         Contact Via Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
         <div className="max-w-7xl mx-auto text-center text-slate-500">
-          <p>&copy; 2025 Vansh Mudgal. All rights reserved.</p>
+          <p>&copy; 2026 Vansh Mudgal. All rights reserved.</p>
         </div>
       </footer>
     </div>
