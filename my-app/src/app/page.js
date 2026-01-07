@@ -5,6 +5,7 @@ import cryptowebsite_ss from "./cryptowebsite_ss.png";
 import energywebsite_ss from "./energywebsite_ss.png";
 import furniture_ss from "./furniture_ss.png"
 import yogawebsite_ss from "./yogawebsite_ss.png"
+import pastaz from "./pastaz.png"
 import { Search, TrendingUp, BarChart, Globe } from "lucide-react";
 
 import Image from "next/image";
@@ -104,8 +105,30 @@ export default function Home() {
       link: "https://crypto-final-five.vercel.app",
       tags: ["React", "Node.js", "RESTful APIs", "Nextjs","Javascript(ES6+)","TailwindCSS"],
     },
-    {
+
+      {
       id: 2,
+      title: "INESA PASTAZ",
+      description:
+        "A premium, high-conversion food ordering platform designed for an authentic Italian bistro. Features include a dynamic shopping cart, strict location-based delivery validation (geofencing logic), and a fully responsive mobile-first design. Built to elevate brand authority and streamline the user journey from menu browsing to checkout.",
+      image:
+        pastaz,
+      link: "https://pasta-rose.vercel.app/",
+      tags: ["React.js",  "TailwindCSS", "HTML","Vite","Javascript(ES6+)"]
+    },
+
+    {
+      id: 4,
+      title: "LUXORIA",
+      description:
+        "Helps furniture brands showcase their collections with a clean, organized experience that improves product discovery and user engagement.",
+      image:
+        furniture_ss,
+      link: "https://furniture-deployed.vercel.app",
+      tags: ["React.js","TailwindCSS","HTML","Vite","Javascript(ES6+)"]
+    },
+    {
+      id: 3,
       title: "SURGE Energy Drink",
       description:
         "Builds a strong brand presence by showcasing products, athletes, and updates in one engaging platform that drives user interest and brand loyalty.",
@@ -115,27 +138,9 @@ export default function Home() {
       tags: ["React.js","TailwindCSS","HTML","Javascript(ES6+)","Nodejs"]
     },
 
-     {
-      id: 3,
-      title: "LUXORIA",
-      description:
-        "Helps furniture brands showcase their collections with a clean, organized experience that improves product discovery and user engagement.",
-      image:
-        furniture_ss,
-      link: "https://furniture-deployed.vercel.app",
-      tags: ["React.js","TailwindCSS","HTML","Vite","Javascript(ES6+)"]
-    },
+     
    
-    {
-      id: 4,
-      title: "ZenFlow",
-      description:
-        "A modern yoga website mockup designed to present yoga practices, informative articles, and available courses in a clean, user-friendly layout.",
-      image:
-        yogawebsite_ss,
-      link: "https://yoga-alpha-ashen.vercel.app",
-      tags: ["React.js", "Javascript(ES6+)", "TailwindCSS", "HTML","Vite","Javascript(ES6+)"]
-    }
+  
   ];
 
   return (
@@ -182,6 +187,13 @@ export default function Home() {
                 className="text-slate-300 hover:text-violet-400 transition-colors font-medium"
               >
                 About
+              </a>
+
+               <a
+                href="#testimonials"
+                className="text-slate-300 hover:text-violet-400 transition-colors font-medium"
+              >
+                Testimonials
               </a>
               <a
                 href="#contact"
@@ -557,10 +569,10 @@ export default function Home() {
       {/* Testimonial Card */}
       {[
         {
-          name: "Ranjeet Kapoor",
-          role: "Owner, The French Patisserie",
+          name: "Deepak Singh",
+          role: "Inesia Pastaz",
           quote:
-            "Vansh helped us create a clean and visually appealing website that reflects the quality of our bakery. The site works smoothly on mobile and presents our business professionally.",
+            "Vansh helped us create a clean and visually appealing website that reflects the quality of our resturant site works smoothly on mobile and presents our business professionally.",
           impact:
             "Improved online presence, better mobile experience, clearer communication",
           color: "amber",
