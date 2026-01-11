@@ -4,7 +4,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Deepak Singh",
-      role: "Inesia Pastaz",
+      role: "INESA Pastaz",
       quote:
         "Vansh helped us create a clean and visually appealing website that reflects the quality of our restaurant. The site works smoothly on mobile and presents our business professionally.",
       impact:
