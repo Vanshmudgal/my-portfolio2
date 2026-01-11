@@ -11,7 +11,7 @@ import {
   SiNodedotjs,
   SiGit,
   SiGithub,
-  SiMongodb,
+  SiFirebase,
 } from "react-icons/si";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -25,7 +25,7 @@ const techStack = [
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-500", bgColor: "bg-green-500/10" },
   { name: "Git", icon: SiGit, color: "text-red-500", bgColor: "bg-red-500/10" },
   { name: "GitHub", icon: SiGithub, color: "text-gray-200", bgColor: "bg-gray-800" },
-  { name: "MongoDB", icon: SiMongodb, color: "text-green-400", bgColor: "bg-green-500/10" },
+  { name: "Firebase", icon: SiFirebase, color: "text-amber-400", bgColor: "bg-amber-500/10" },
 ];
 
 export default function TechCarousel() {
