@@ -25,9 +25,9 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-slate-100">Full Stack Developer</span>
+              <span className="text-slate-100">Freelance Full-Stack Developer</span>
               <span className="block bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mt-2">
-                Crafting Digital Excellence
+                Helping Businesses Build Modern Web Applications
               </span>
             </h1>
 
@@ -58,14 +58,6 @@ export default function Hero() {
 
             {/* Social Icons */}
             <div className="flex gap-4 pt-4">
-              <a
-                href="https://github.com/Vanshmudgal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
-              >
-                <Github className="w-5 h-5" />
-              </a>
 
               <a
                 href="https://www.linkedin.com/in/vansh-mudgal-102096134"
