@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Vansh Mudgal | Freelance Web developer",
   description: "Generated p",
+  icons: {
+    icon: "/favicon.ico", // ← added favicon here
+  },
 };
 
 export default function RootLayout({ children }) {
