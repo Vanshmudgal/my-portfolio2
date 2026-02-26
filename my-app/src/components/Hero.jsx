@@ -56,25 +56,7 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 pt-4">
-
-              <a
-                href="https://www.linkedin.com/in/vansh-mudgal-102096134"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-
-              <a
-                href="mailto:vanshmudgal12@gmail.com"
-                className="p-3 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
+            
           </div>
 
           {/* RIGHT SIDE (Code Bubble) */}
