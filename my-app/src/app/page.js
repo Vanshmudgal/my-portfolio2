@@ -72,7 +72,7 @@ export default function Home() {
       type: "Business Solution",
       description: "A streamlined digital ordering solution. Features local-storage based cart persistence and interactive UI.",
       image: pastaz,
-      link: "https://pasta-cc779.web.app/",
+      link: "https://pasta-g55q.vercel.app/",
       tags: ["React.js", "TailwindCSS", "Vite", "JavaScript"],
     },
   ];
