@@ -59,7 +59,7 @@ export default function ContactSection() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span>vanshmudgal12@gmail.com</span>
+              <span>vansh@vanshmudgal.in</span>
               <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </a>
 
@@ -88,7 +88,7 @@ export default function ContactSection() {
           {/* Primary Button */}
           <div>
             <a
-              href="mailto:vanshmudgal12@gmail.com"
+              href="mailto:vansh@vanshmudgal.in"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white px-10 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/25"
             >
               Contact Via Email

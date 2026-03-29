@@ -13,7 +13,6 @@ import {
 
 // Local Components
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/CTA";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -43,7 +42,7 @@ export default function Home() {
       id: 1,
       title: "CryptoWatch",
       type: "Finance App",
-      description: "A real-time financial dashboard engineered for high-frequency data aggregation. Integrates multiple RESTful APIs via Axios.",
+      description: "Real-time crypto dashboard handling live price feeds across multiple exchanges. Built with React & Node.js — demonstrates ability to deliver low-latency, data-heavy financial tools for fintech clients.",
       image: cryptowebsite_ss,
       link: "https://crypto-final-five.vercel.app",
       tags: ["React", "Node.js", "REST APIs", "TailwindCSS"],
@@ -52,7 +51,7 @@ export default function Home() {
       id: 2,
       title: "LUXORIA",
       type: "E-commerce",
-      description: "A full-stack e-commerce simulation for high-ticket retail. Connects React frontend with Firebase backend.",
+      description: "Full-stack luxury e-commerce store with Firebase auth, live cart, and product management. Ideal reference for clients needing a fully custom, scalable online store built from scratch.",
       image: furniture_ss,
       link: "https://furniture-43eb2.web.app/",
       tags: ["React.js", "Firebase", "Context API", "TailwindCSS"],
@@ -61,7 +60,7 @@ export default function Home() {
       id: 3,
       title: "SURGE Energy",
       type: "Landing Page",
-      description: "A high-performance marketing landing page optimized for load speed using Vite and brand-centric layout.",
+      description: "Conversion-focused marketing landing page built with Vite for near-instant load times. A strong example for clients who need a high-impact product launch or campaign page.",
       image: energywebsite_ss,
       link: "https://energy-deploy-weld.vercel.app",
       tags: ["Vite", "React.js", "TailwindCSS", "Node.js"],
@@ -70,7 +69,7 @@ export default function Home() {
       id: 4,
       title: "INESA PASTAZ",
       type: "Business Solution",
-      description: "A streamlined digital ordering solution. Features local-storage based cart persistence and interactive UI.",
+      description: "Digital ordering system for a local restaurant — cart persistence, smooth UI, mobile-ready. Great reference for small business owners looking to move from paper menus to a custom web solution.",
       image: pastaz,
       link: "https://pasta-g55q.vercel.app/",
       tags: ["React.js", "TailwindCSS", "Vite", "JavaScript"],
@@ -164,7 +163,6 @@ export default function Home() {
         <TechCarousel />
         <About />
         <ContactSection />
-        <Testimonials />
       </main>
 
       <footer className="py-8 px-4 border-t border-slate-800">
