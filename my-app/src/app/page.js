@@ -24,6 +24,7 @@ import cryptowebsite_ss from "./cryptowebsite_ss.png";
 import energywebsite_ss from "./energywebsite_ss.png";
 import furniture_ss from "./furniture_ss.png";
 import pastaz from "./pastaz.png";
+import vireon from "./vireon.png"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,14 +67,14 @@ export default function Home() {
       tags: ["Vite", "React.js", "TailwindCSS", "Node.js"],
     },
     {
-      id: 4,
-      title: "INESA PASTAZ",
-      type: "Business Solution",
-      description: "Digital ordering system for a local restaurant — cart persistence, smooth UI, mobile-ready. Great reference for small business owners looking to move from paper menus to a custom web solution.",
-      image: pastaz,
-      link: "https://pasta-g55q.vercel.app/",
-      tags: ["React.js", "TailwindCSS", "Vite", "JavaScript"],
-    },
+  id: 4,
+  title: "VIREON GROUP",
+  type: "Real Estate Website Solution",
+  description: "Your properties, sold faster. A website that turns visitors into serious buyers.",
+  image: vireon,
+  link: "https://repo3-iota.vercel.app/",
+  tags: ["Next.js", "TailwindCSS", "JavaScript"],
+},
   ];
 
   return (
