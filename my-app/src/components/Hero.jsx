@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Github, Linkedin, Mail, Code } from "lucide-react";
+import { ArrowRight, ChevronDown, Github, Linkedin, Mail, Code,Linkedin } } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -54,8 +54,18 @@ export default function Hero() {
                 View Portfolio
                 <ChevronDown className="w-5 h-5" />
               </a>
-            </div>
 
+
+            </div>
+<a
+  href="https://www.linkedin.com/in/YOUR-USERNAME/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border-2 border-slate-700 px-4 py-4 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all flex items-center justify-center"
+  aria-label="LinkedIn"
+>
+  <Linkedin className="w-5 h-5" />
+</a>
             
           </div>
 
