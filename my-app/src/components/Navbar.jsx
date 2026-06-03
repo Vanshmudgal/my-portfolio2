@@ -40,7 +40,7 @@ export default function Navbar() {
             <a href="#portfolio" className="navlink">Portfolio</a>
             <a href="#skills" className="navlink">Skills</a>
             <a href="#about" className="navlink">About</a>
-            <a href="#testimonials" className="navlink">Testimonials</a>
+        
 
             <a
               href="#contact"
