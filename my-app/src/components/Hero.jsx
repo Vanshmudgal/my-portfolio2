@@ -1,6 +1,13 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Github, Linkedin, Mail, Code,Linkedin } } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  Github,
+  Linkedin,
+  Mail,
+  Code,
+} from "lucide-react";
 
 export default function Hero() {
   return (
@@ -25,7 +32,9 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-slate-100">Freelance Full-Stack Developer</span>
+              <span className="text-slate-100">
+                Freelance Full-Stack Developer
+              </span>
               <span className="block bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mt-2">
                 Helping Businesses Build Modern Web Applications
               </span>
@@ -55,18 +64,16 @@ export default function Hero() {
                 <ChevronDown className="w-5 h-5" />
               </a>
 
-
+              <a
+                href="https://www.linkedin.com/in/YOUR-USERNAME/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-slate-700 px-4 py-4 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all flex items-center justify-center"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
-<a
-  href="https://www.linkedin.com/in/YOUR-USERNAME/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border-2 border-slate-700 px-4 py-4 rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all flex items-center justify-center"
-  aria-label="LinkedIn"
->
-  <Linkedin className="w-5 h-5" />
-</a>
-            
           </div>
 
           {/* RIGHT SIDE (Code Bubble) */}
